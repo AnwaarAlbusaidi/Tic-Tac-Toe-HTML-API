@@ -1,34 +1,4 @@
-#game-board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-}
 
-.square {
-    background-color: white;
-    border: 2px solid black;
-    font-size: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.square:hover {
-    background-color: #eee;
-}
-
-/* Universal CSS rules /
-/ Set box-sizing to border-box so padding and borders don't affect the element's total width and height /
-/ Set margin and padding to 0 for all elements */
-
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
     /* Body CSS rules /
     / Set background color to light gray /
     / Use Arial as the primary font family */
