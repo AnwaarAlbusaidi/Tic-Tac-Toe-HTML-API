@@ -1,23 +1,23 @@
 package com.newTTT.TicTacToeGameBoard.Controller;
 
 import com.newTTT.TicTacToeGameBoard.model.Board;
-import com.newTTT.TicTacToeGameBoard.model.Bot;
+import com.newTTT.TicTacToeGameBoard.service.Bot;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/bot")
+@RequestMapping("/api")
 public class BotController {
-    private Bot computerOpponent;
 
-    public BotController() {
-        this.computerOpponent = new Bot('O');
-    }
+    @Autowired
+    private Bot botPlayer;
 
-    @PostMapping
-    public int[] getMove(@RequestBody Board gameBoard) {
-        return computerOpponent.getMove(gameBoard);
+    @PostMapping("/random-move")
+    public int makeRandomMove(@RequestBody Board board) {
+        int index = botPlayer.makeRandomMove(board);
+        return index;
     }
 }
