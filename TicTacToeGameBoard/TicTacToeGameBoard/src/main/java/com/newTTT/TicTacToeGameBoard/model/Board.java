@@ -1,17 +1,17 @@
 package com.newTTT.TicTacToeGameBoard.model;
 
 public class Board {
-     char[][] board;
+     String[] board;
 
 
     public Board() {
     }
 
-    public char[][] getBoard() {
+    public String[] getBoard() {
         return board;
     }
 
-    public void setBoard(char[][] board) {
+    public void setBoard(String[] board) {
         this.board = board;
     }
 }

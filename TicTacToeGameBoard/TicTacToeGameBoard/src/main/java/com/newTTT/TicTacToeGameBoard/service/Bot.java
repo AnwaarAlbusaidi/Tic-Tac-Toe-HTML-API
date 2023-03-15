@@ -10,20 +10,18 @@ public class Bot {
     public Bot() {
     }
 
-    public int makeRandomMove(Board boardObj) {
-        char[][] board = boardObj.getBoard();
+    public int makeRandomMove(String[] board) {
         Random rand = new Random();
-        int size = board.length;
-        int randomRow = rand.nextInt(size);
-        int randomCol = rand.nextInt(size);
+        int size = (int) Math.sqrt(board.length);
+        int randomIndex = rand.nextInt(board.length);
 
-        while (board[randomRow][randomCol] != '\u0000') {
+        while (board[randomIndex] != "") {
             // keep generating new random indices until an empty cell is found
-            randomRow = rand.nextInt(size);
-            randomCol = rand.nextInt(size);
+            randomIndex = rand.nextInt(board.length);
         }
 
-        return randomRow * size + randomCol;
+        return randomIndex;
     }
+
 }
 
