@@ -3,7 +3,6 @@ package com.newTTT.TicTacToeGameBoard.model;
 public class Board {
      String[] board;
 
-
     public Board() {
     }
 
