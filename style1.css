@@ -55,7 +55,7 @@ h1 {
 }
 
 .board-cell:hover {
-  background-color: #433131;
+  background-color: #d4cbcb;
   box-shadow: 2px 2px #000;
 }
 
